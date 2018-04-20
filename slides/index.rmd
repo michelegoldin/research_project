@@ -1,0 +1,141 @@
+---
+title: "Research Project"
+author: "Michele Goldin"
+date: "4/11/2018"
+output:  
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Acquisition of null subjects by young heritage bilinguals and child L2 learners
+
+- English is an overt subject language ; Spanish is a null subject language
+
+- In Spanish, pronouns fall at the syntax-pragmatics interface
+
+- Children go through a null subject stage until around age 3;6
+
+- Bilingual children's comprehension and production of pronouns is vulnerable to cross-linguistic influence
+
+- L2 learners of Spanish can acquire the syntactic properties of pronouns in Spanish but exhibit more difficulty in acquiring the pragmatic constraints that guide pronoun use
+
+```{r, 'source_libs', message = FALSE, include = FALSE}
+source("../scripts/libs.R")
+```
+
+```{r, 'source_script', message = FALSE, include = FALSE}
+
+source("../scripts/researchproject.R")
+```
+
+---
+
+#Research Questions
+
+- RQ1: Do L2 children follow the same pattern of acquisition of null subjects in English and Spanish as do simultaneous heritage speakers?
+
+-- H: Bearing in mind the different amounts of exposure to Spanish that the L2 learners have had since birth in comparison to heritage speakers, in response to RQ1 I hypothesize that there will be differences between the two groups in Spanish, but not in English because both groups are English dominant.
+
+- RQ2: Does morphological proficiency modulate null subject acceptance?
+
+-- H: In response to RQ2 I hypothesize that proficiency is correlated with acceptance of overt subjects in both English and Spanish. I expect that as children’s proficiency in verbal morphology increases, so will their acceptance of overt subjects. This correlation has been found to be the case in previous studies of L1 acquisition of English (Orfitelli & Hyams, 2012), child L2 acquisition of English (Hilles, 1991), and adult L2 acquisition of Spanish (Clements and Domínguez, 2017).
+
+---
+
+#The Study
+
+.pull-left[
+Participants
+- 20 heritage simultaneous bilinguals (mean age = 5;5) 
+
+- 14 L2 learners of Spanish (mean age = 5;3)
+
+- 13 English monolinguals (mean age = 5;9)
+]
+
+.pull-right[
+Tasks
+- parents completed language background questionnaire
+
+- proficiency in verbal morphology assessed using the BESA
+
+- Acceptability Judgment Task in English and Spanish
+]
+
+---
+
+#Proficiency scores in English and Spanish
+
+```{r, besa scores}
+
+besa_table_markdown
+
+```
+
+---
+
+#Average null and overt responses in English and Spanish
+
+```{r, null and overt responses}
+
+response_table_markdown
+
+```
+
+---
+
+#Plot 1 - null and overt responses in English as a function of group
+
+```{r, plot 1, fig.height= 6, fig.width = 12}
+
+english_plot
+
+```
+
+---
+
+#Model Fit 1
+
+```{r, model 1}
+
+summary(glm_add)
+
+```
+
+---
+
+#Plot 2 - null and overt acceptance as a function of English proficiency
+
+```{r, plot 2, fig.height= 6, fig.width = 12}
+
+prof_plot
+
+```
+
+---
+
+#Model fit 2 - this one?
+
+```{r, model fit 2}
+
+anova(mod_null, mod_group, mod_prof, mod_add, mod_full, test = 'Chisq')
+
+```
+
+---
+
+#Model fit 2 - or this one?
+
+```{r, model fit alt}
+
+summary(mod_full)
+
+```

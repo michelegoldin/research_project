@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Research Project</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Michele Goldin" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Research Project
+### Michele Goldin
+### 4/11/2018
+
+---
+
+
+
+
+# Acquisition of null subjects by young heritage bilinguals and child L2 learners
+
+- English is an overt subject language ; Spanish is a null subject language
+
+- In Spanish, pronouns fall at the syntax-pragmatics interface
+
+- Children go through a null subject stage until around age 3;6
+
+- Bilingual children's comprehension and production of pronouns is vulnerable to cross-linguistic influence
+
+- L2 learners of Spanish can acquire the syntactic properties of pronouns in Spanish but exhibit more difficulty in acquiring the pragmatic constraints that guide pronoun use
+
+
+
+
+
+---
+
+#Research Questions
+
+- RQ1: Do L2 children follow the same pattern of acquisition of null subjects in English and Spanish as do simultaneous heritage speakers?
+
+-- H: Bearing in mind the different amounts of exposure to Spanish that the L2 learners have had since birth in comparison to heritage speakers, in response to RQ1 I hypothesize that there will be differences between the two groups in Spanish, but not in English because both groups are English dominant.
+
+- RQ2: Does morphological proficiency modulate null subject acceptance?
+
+-- H: In response to RQ2 I hypothesize that proficiency is correlated with acceptance of overt subjects in both English and Spanish. I expect that as children’s proficiency in verbal morphology increases, so will their acceptance of overt subjects. This correlation has been found to be the case in previous studies of L1 acquisition of English (Orfitelli &amp; Hyams, 2012), child L2 acquisition of English (Hilles, 1991), and adult L2 acquisition of Spanish (Clements and Domínguez, 2017).
+
+---
+
+#The Study
+
+.pull-left[
+Participants
+- 20 heritage simultaneous bilinguals (mean age = 5;5) 
+
+- 14 L2 learners of Spanish (mean age = 5;3)
+
+- 13 English monolinguals (mean age = 5;9)
+]
+
+.pull-right[
+Tasks
+- parents completed language background questionnaire
+
+- proficiency in verbal morphology assessed using the BESA
+
+- Acceptability Judgment Task in English and Spanish
+]
+
+---
+
+#Proficiency scores in English and Spanish
+
+
+```r
+besa_table_markdown
+```
+
+
+
+|group | mean_en| sd_en| mean_sp| sd_sp|
+|:-----|-------:|-----:|-------:|-----:|
+|hl    |   86.50| 17.71|   68.18| 19.42|
+|l2    |   87.86| 13.75|   57.79| 18.09|
+|mo    |   96.15|  6.28|      NA|    NA|
+
+---
+
+#Average null and overt responses in English and Spanish
+
+
+```r
+response_table_markdown
+```
+
+
+
+|group |language |status | meanResp|
+|:-----|:--------|:------|--------:|
+|hl    |eng      |overt  |     0.62|
+|hl    |sp       |null   |     0.49|
+|hl    |sp       |overt  |     0.52|
+|l2    |eng      |overt  |     0.64|
+|l2    |sp       |null   |     0.43|
+|l2    |sp       |overt  |     0.46|
+|mo    |eng      |overt  |     0.82|
+
+---
+
+#Plot 1 - null and overt responses in English as a function of group
+
+
+```r
+english_plot
+```
+
+![](index_files/figure-html/plot 1-1.png)&lt;!-- --&gt;
+
+---
+
+#Model Fit 1
+
+
+```r
+summary(glm_add)
+```
+
+```
+## 
+## Call:
+## glm(formula = cbind(overt, null) ~ group, family = "binomial", 
+##     data = df_counts_wide[df_counts_wide$language == "eng", ])
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.9400  -0.7186   0.0000   0.6505   2.7423  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)  0.58779    0.19720   2.981  0.00288 **
+## groupmo      0.91043    0.32138   2.833  0.00461 **
+## grouphl     -0.07696    0.25604  -0.301  0.76373   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 87.242  on 46  degrees of freedom
+## Residual deviance: 74.435  on 44  degrees of freedom
+## AIC: 176.94
+## 
+## Number of Fisher Scoring iterations: 4
+```
+
+---
+
+#Plot 2 - null and overt acceptance as a function of English proficiency
+
+
+```r
+prof_plot
+```
+
+![](index_files/figure-html/plot 2-1.png)&lt;!-- --&gt;
+
+---
+
+#Model fit 2 - this one?
+
+
+```r
+anova(mod_null, mod_group, mod_prof, mod_add, mod_full, test = 'Chisq')
+```
+
+```
+## Analysis of Deviance Table
+## 
+## Model 1: respFactor ~ 1
+## Model 2: respFactor ~ group
+## Model 3: respFactor ~ profEn
+## Model 4: respFactor ~ profEn + group
+## Model 5: respFactor ~ profEn + group + profEn:group
+##   Resid. Df Resid. Dev Df Deviance Pr(&gt;Chi)   
+## 1       375     469.39                        
+## 2       373     456.59  2  12.8069 0.001656 **
+## 3       374     459.42 -1  -2.8340 0.092290 . 
+## 4       372     451.41  2   8.0113 0.018213 * 
+## 5       370     446.13  2   5.2832 0.071249 . 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+
+#Model fit 2 - or this one?
+
+
+```r
+summary(mod_full)
+```
+
+```
+## 
+## Call:
+## glm(formula = respFactor ~ profEn + group + profEn:group, family = "binomial", 
+##     data = df_null_sub[df_null_sub$language == "eng", ])
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.0148  -1.3619   0.7645   0.9356   1.3899  
+## 
+## Coefficients:
+##                 Estimate Std. Error z value Pr(&gt;|z|)  
+## (Intercept)    -1.356016   0.809715  -1.675   0.0940 .
+## profEn          0.021727   0.009255   2.348   0.0189 *
+## groupl2         2.231441   1.523394   1.465   0.1430  
+## groupmo        -4.838675   3.539751  -1.367   0.1716  
+## profEn:groupl2 -0.024998   0.017189  -1.454   0.1459  
+## profEn:groupmo  0.059108   0.037614   1.571   0.1161  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 469.39  on 375  degrees of freedom
+## Residual deviance: 446.13  on 370  degrees of freedom
+## AIC: 458.13
+## 
+## Number of Fisher Scoring iterations: 4
+```
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
