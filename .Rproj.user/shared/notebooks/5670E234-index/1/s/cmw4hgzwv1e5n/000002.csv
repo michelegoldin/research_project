@@ -1,0 +1,5 @@
+"0","final_langdata <- tidylangdata%>%
+  mutate(., comp_apt_score = log(iq / 80) + log(motivation))
+"
+"2","Error in eval(expr, envir, enclos) : object 'tidylangdata' not found
+"

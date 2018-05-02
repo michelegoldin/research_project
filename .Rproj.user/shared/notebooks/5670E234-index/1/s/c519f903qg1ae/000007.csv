@@ -1,0 +1,5 @@
+"0","library(tidyverse)
+langdata <- read.csv('./data_raw/pa_5_data/lang_data_raw.csv', header = TRUE, sep = ',')
+head(langdata)
+"
+"0","#View(langdata)"

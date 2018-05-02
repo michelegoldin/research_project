@@ -1,0 +1,169 @@
+---
+title             : "Acquisition of null subjects by heritage children and child L2 learners"
+shorttitle        : "Null subjects in acquisition"
+
+author: 
+  - name          : "Michele Goldin"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "New Brunswick"
+    email         : "michele.goldin@rutgers.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Rutgers University"
+
+abstract: |
+  Studies in monolingual child language have long noted the existence of a missing subject stage, a period of omitted subjects that coincides with the acquisition of verbal inflection and which converges with adult-like patterns at around age 3;5 (Orfitelli & Hyams, 2008; 2012; Grinstead, 2000; among others). While there are a plethora of studies in the literature on adult second language (L2) acquisition of Spanish pronominal realization as well as pronoun development in early bilingual first language (2L1) acquisition, very little is known about how children acquiring a second language in school may pass through this null subject stage or learn the subtle pragmatic constraints governing pronoun distribution. In this study, heritage speakers and Spanish L2 learners aged 4 to 7 (mean age = 5) participated in an acceptability judgment task in both English and Spanish. A comparison group of age-matched English monolingual children was also included. The findings indicate that both bilingual groups performed similarly in their acceptance of null subjects in Spanish. In English, the bilingual groups again performed similarly to each other but accepted significantly more null subjects than their monolingual peers. Additionally, a correlation was found between acquisition of verbal morphology and null subject acceptability in English. These results suggest that both heritage and L2 bilingual children follow a similar trajectory of acquisition of null subjects in both English and Spanish, which differs from monolingual children in English. I argue that the data provide evidence for an extended null subject stage due to competing input and cross-linguistic influence.
+
+keywords          : "first language acquisition; second language acquisition; child language acquisition; null subjects; overt subjects; English and Spanish morphology"
+wordcount         : "252"
+
+bibliography      : ["r-references.bib"]
+
+figsintext        : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : yes
+mask              : no
+
+class             : "man"
+output            : papaja::apa6_word
+---
+
+```{r load_packages, include = FALSE}
+library("papaja")
+```
+
+```{r analysis_preferences}
+# Seed for random number generation
+set.seed(42)
+```
+
+```{r, 'source_libs', message = FALSE, include = FALSE}
+source("../scripts/libs.R")
+```
+
+```{r, 'source_script', message = FALSE, include = FALSE}
+
+source("../scripts/researchproject.R")
+```
+
+\newpage
+
+# Methods
+
+##Research Questions, hypotheses and predictions
+
+This study is guided by two research questions, the first of which is as follows:
+
+RQ1: Does age of acquisition affect acceptability of null subjects in Spanish?
+
+Given previous results, age of acquisition should have no effect on bilingual children’s acceptability of null and overt subjects. Studies in both 2L1 and child L2 (as well as adult L2) acquisition have shown that while the syntactic properties of null subjects in Spanish are more easily acquirable, the pragmatic constraints present more challenges. Therefore, it is expected that both groups of bilingual children will perform similarly on the experimental task in Spanish by accepting both null and overt subjects. 
+
+The second research question is as follows:
+
+RQ2a: Does morphological proficiency modulate null subject acceptance in Spanish?
+
+RQ2b: Does morphological proficiency modulate null subject acceptance in English?
+
+Grinstead (2000) observed that for monolingual Spanish children, overt subjects appear around the same age that tense and morphology begin to be used in more adult-like ways. In other words, acquisition of verbal morphology co-occurs with the pragmatically felicitous use of null and overt subjects. If this is case for monolingual children, it is reasonable to assume that the same order of acquisition exists for bilingual children. Therefore, the prediction for this study is that as bilingual children’s verbal morphology in Spanish increases, so will their understanding of the pragmatic constraints governing the use of null and overt subjects.
+
+In English, Orfitelli & Hyams (2008) showed that the null subject stage coincides with a period in early childhood of root infinitives or uninflected verbs. This period tapers off between the ages of 3 and 4, just as the null subject stage does. If this is true for monolingual children, then acquisition of verbal morphology in English dominant bilingual children should modulate null subject acceptance in English. I predict that as verbal morphology increases, overt subject acceptance will increase and null subject acceptance will decrease.
+
+## Participants
+
+Three groups of children ages 4;0 to 7;0 participated in this research. They were all students in pre-kindergarten, kindergarten or first grade. The first was a group of heritage speakers (n=20, mean age=5;5) recruited at a Spanish-immersion school in New Jersey who had attended the school for at least one academic year. The second was a group of English L2 learners of Spanish (n=14; mean age=5;3) who attended the same immersion school for at least one academic year. None of the children had attended the school for more than two years. The third was a group of monolingual English speakers (n=13; mean age=5;9) attending English monolingual schools in New Jersey, recruited through personal contacts. The heritage speakers had either one or two parents who spoke Spanish in the home and according to responses from parents on a language background questionnaire, had high exposure to Spanish in the form of books and movies at home, classes and camps, relationships with Spanish-speaking relatives and travel to Spanish-speaking countries. All the heritage speakers were born in the United States or arrived before the age of two. Therefore, they were exposed to both languages before the age of three and are considered simultaneous bilinguals. The L2 group began to learn Spanish in the immersion school after age 2;6 or 3. Some parents reported exposing their children around 12 months to some Spanish before starting in the school through songs and television programs, but all the parents in this group were monolingual English speakers with limited knowledge of Spanish. All the English monolingual children had little to no exposure to Spanish . Parents were asked country of origin on the language background questionnaire so that children acquiring a Caribbean variety of Spanish were not included . Care was also taken to ensure that the sample of children in the immersion school did not have teachers speaking Caribbean Spanish. Three additional heritage children were also tested but not included in the final sample due to parents citing very low Spanish exposure in the home or using a Caribbean variety of Spanish in the home.
+
+The Spanish immersion school is located in New Jersey and offers programs for children ages 2;6 to first grade. The preschool programs for ages 2;6 to 4 are 100% immersion taught by a staff of native teachers of Spanish from Latin American countries. For children in pre-kindergarten through 1st grade, one hour of English literacy is provided every day by a native English teacher but all other subjects and activities, including recess and lunchtime, are led in Spanish. From my classroom observations, the children are consistently encouraged and reminded to interact in Spanish with their teachers and classmates, but revert to English with their peers during playtime and spontaneous interactions. Roughly 50% of the students are heritage speakers of Spanish and the other 50% are children who come from English monolingual families.
+
+## Procedure
+
+Children’s oral proficiency in each language, specifically morphosyntax, was assessed using the BESA  (Peña et al., 2014) and parents were asked to complete a language background questionnaire for each child which included information such as age of first exposure and current language use. No child was excluded from the study on the basis of their BESA proficiency score because this was used as a factor for statistical analysis and will be discussed further in results (see Table 1 for mean scores by group in both languages). Following Sorace et al. (2009), an acceptability judgment task was chosen for this study because such tasks have proven successful in assessing even very young children’s understanding of grammatical features (i.e. Orfitelli & Hyams, 2012). Two versions of the task were created, one in Spanish and one in English, and both were delivered via a PowerPoint presentation presented on a 13 inch screen laptop. Of the bilingual children, half received the English task first and half the Spanish task first. The experimenter spoke to the participants in the language in which the experiment was being carried out. English monolinguals were administered the task in English only. 
+
+Table 1 BESA proficiency scores by group
+
+```{r, besa scores}
+
+besa_table_markdown
+
+```
+
+## Material
+
+The acceptability judgment task, adapted from Sorace et al. (2009), consisted of a series of short video clips showing four Disney character puppets (Mickey Mouse, Minnie Mouse, Donald Duck and Goofy) with eight experimental items and four fillers. In the experimental items, either Mickey or Goofy performed an action which was commented upon either by himself ([-topic shift] (-TS) condition) or by the other character that had witnessed the action but was not involved in it ([+topic shift] (+TS) condition). Then, the participants watched Minnie and Donald each say a subordinate clause one after the other. One character would begin the subordinate clause with a null subject and the other with an overt subject (he/él). The order in which the grammatical and the ungrammatical sentences were presented by Minnie and Donald was counterbalanced throughout. Mickey and Goofy were selected as the characters performing the actions because they are of the same gender and, thus, the subject pronoun could refer ambiguously to either of them.
+
+After listening to the comments of all the characters, the children (who had been told that the characters were learning English or Spanish) were asked to decide which of the final two characters (Minnie Mouse or Donald) spoke ‘better’ English or Spanish. Their responses were audio recorded and coded for null and overt subject expression acceptability in –topic shift (-TS) conditions and +topic shift (+TS) conditions. See appendix for a list of experimental stimuli. The filler items had a similar structure to the experimental ones, but the characters in the second video uttered true or false statements rather than ungrammatical ones with the aim of checking that the participants had understood the task and were focusing on the sentences presented to them.
+
+It is important to note the differences between the task in English and in Spanish. In English, children were asked to accept or reject grammatical sentences with overt subjects and ungrammatical sentences with null subject pronouns, but in Spanish, children had to assess the context to reject or accept pragmatically appropriate or inappropriate pronominal forms. To succeed in the English task, participants had to decide purely on the basis of their syntactic knowledge of English as a non-pro-drop language where null subjects are never allowed in subordinate clauses, regardless of the discourse-pragmatic context. However, in Spanish, children needed to integrate their syntactic knowledge of Spanish as a pro-drop language with their knowledge of the pragmatic constraints that guide the distribution of null and overt subject pronouns in topic shift or topic continuation circumstances (Sorace et al., 2009).
+
+## Data analysis
+
+The data were analyzed in R: A language and environment for statistical computing (R Development Core Team, 2012) using a generalized linear model to examine personal pronoun use (null, overt) as a function of group (monolingual, heritage, L2). The analyses for the English and the Spanish data are reported separately. 
+
+# Results
+
+##Pronominal preferences in English
+
+Given the categorical nature of the participants’ responses, the data were modeled using a generalized linear model with a binomial linking function. Response (null/overt) was set as the dependent variable and group was set as the predictor. Experiment-wise alpha was set at 0.05. The factor ‘group’ was dummy coded with L2 participants set as the reference. The main effect of group was tested using nested model comparisons. There was a main effect of group (χ2(2) = 12.81, p < 0.002). The monolingual group responded with an overt pronoun significantly more often than the L2 group (β = 0.91; SE = 0.32; z = 2.83; p < .005) and significantly more often than the heritage group (β = -0.98; SE = 0.30; z = -3.27; p < .002). The heritage group performed similarly to the L2 group and there were no significant differences between the two (β = -0.08; SE = 0.25; z = -0.30; p = 0.76) (See Figure 1).
+
+Fig. 1 Distribution by group of null and overt acceptance in English
+```{r, plot 1}
+
+english_plot
+
+```
+
+##Pronominal preferences in Spanish
+
+The same generalized linear model was used for the Spanish responses of both bilingual groups and the L2 participants were once again set as the reference. Response (null/overt) was set as the dependent variable and group was set as the predictor. Experiment-wise alpha was set at 0.05. Figure 2 reports the mean of overt and null pronoun choices in Spanish. Both the heritage and L2 groups performed similarly and there was no effect of group (β = 0.24; SE = 0.24; z = 0.97; p = 0.33).
+
+Fig. 2 Distribution by group of expected null and overt pronoun acceptance in Spanish
+```{r, plot 2}
+
+spanish_plot
+
+```
+
+##Relationship between acquisition of verbal morphology and subject acceptance
+
+To test the relationship between morphological proficiency and subject acceptance, the data were once again analyzed using a generalized linear model with a binomial linking function. Response (null/overt) was set as the dependent variable and proficiency and group were set as predictors. Main effects and the proficiency by group interaction were assessed using nested model comparisons in each language. Experiment-wise alpha was set at 0.05.
+
+In Spanish, there were no main effects and no interaction. In English, however, there was a main effect of group (F(2) = 12.81, p < .002) and a main effect of proficiency and group (F(1) = 5.18, p < 0.02) as well as a marginally significant group by English proficiency interaction (F(2) = 5.28; p = .071). The model containing the interaction provided the best fit of the data. The plot in figure 3 shows the relationship between morphological proficiency in English and null/overt acceptance in the same language by group. For the monolingual and heritage groups, following my hypothesis, as verbal morphology increases so does acceptance of overt subjects. However, for the L2 children, there does not seem to be any relationship, at this stage in acquisition, between proficiency and response.
+
+Fig. 3 Null and overt acceptance in English by group as a function of English morphological proficiency
+```{r, plot 3}
+
+prof_plot
+
+```
+
+# Discussion
+
+The first research question guiding this study addressed whether age of acquisition had an effect on null subject acceptability and the results obtained support the hypothesis that there would be no differences. Indeed, both the simultaneous bilinguals who began acquiring English and Spanish before the age of 3 and the child L2 learners who acquired English before 3 and Spanish after age 3, patterned similarly in their responses to the acceptability judgment task. Their acceptance of both null and overt subjects at around chance level suggests that being bilingual, whether simultaneous or an L2 learner, leads to greater difficulty in the acquisition of the discourse conditions governing the distribution of subject pronouns. The children accepted an almost equal amount of null and overt subjects in both (-TS) and (+TS) conditions, indicating their understanding that both are grammatical, possible and viable in Spanish, but their uncertainty as to the pragmatic conditions under which to use them. This distinction is clear when comparing their results in English. Here, the pattern of results suggests that though the bilingual children accept more null subjects than their monolingual peers, they exhibit a tendency towards an overt subject grammar. They show a preference for overt pronouns in English that is not revealed in their Spanish.
+
+The second research question of this study addressed the relationship between morphological proficiency and null subject acceptance in both languages. In Spanish, contrary to the predictions that would have supported my hypothesis, there was no correlation between acquisition of verbal morphology and null subject acceptance. In English, however, the picture is slightly different. Bearing in mind that English was the dominant language for all three groups of children, as well as the dominant language of the society, an interesting pattern emerged. In line with previous studies (i.e. Orfitelli & Hyams, 2008), the monolingual children provided evidence in support of my hypothesis that there would be a relationship between acquisition of verbal morphology and pronoun acceptance. As the children’s proficiency increased, less null subjects were accepted in favor of mostly overt ones, demonstrating near achievement of an adult-like grammar by the ages tested here. The heritage simultaneous bilinguals presented with a similar pattern, though as seen in figure 3, they accepted significantly more null subjects than the monolingual children. Given that these children are 2L1 speakers of English and Spanish and that English is the dominant language of the society, it is unclear whether they follow a similar pattern of acquisition to their monolingual peers because they were English dominant or because the syntactic and pragmatic properties of subject use in Spanish are more complex to acquire than the simpler grammatical rules of English. Finally, and surprisingly, the L2 learners presented a different pattern of acquisition all together in which there was no relationship between verbal morphology and subject acceptability. This could be explained as an interruption of the monolingual path of development due to the addition of a new language at age 3 or 4, one that provides competing evidence for null subjects.
+
+
+\newpage
+
+# References
+
+Grinstead, J. (2000). Case, inflection and subject licensing in child Catalan and Spanish. Journal of Child Language, 27, 119-155.
+
+Hulk, A. and Muller, N. (2000). Bilingual first language acquisition at the interface between syntax and pragmatics. Bilingualism: Language and Cognition, 3(3), 227-244.
+
+Liceras, J., Fernández Fuertes, R., Alba de la Fuente, A. (2012). Overt subjects and copula omission in the Spanish and the English grammar of English–Spanish bilinguals: On the locus and directionality of interlinguistic influence. First Language 32(1-2), 88–115.
+
+Orfitelli, R. & Hyams, N. (2008). An experimental study of children’s comprehension of null subjects: Implications for grammatical/performance accounts. BUCLD 32 Proceedings, ed. H. Chan, H. Jacob, and E. Kapia, 335-346. Somerville, MA: Cascadilla Press.
+
+Orfitelli, R. & Hyams, N. (2012). Children’s Grammar of Null Subjects: Evidence from Comprehension. Linguistic Inquiry, 43(4), 563 – 590.
+
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup

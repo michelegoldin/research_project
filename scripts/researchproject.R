@@ -120,7 +120,61 @@ mod_null <- glm(respFactor ~ 1, data = df_null_sub[df_null_sub$language == 'eng'
 anova(mod_add, mod_full)
 
 anova(mod_null, mod_group, mod_prof, mod_add, mod_full, test = 'Chisq')
+
+anova(mod_null, mod_group, mod_add, test = 'Chisq')
+
+#Main effect of group, group + prof, and marginally significant interaction
+
+summary(mod_full)
+
+#Spanish analysis
+
+#Spanish plot
+
+spanish_plot <- df_counts_long %>% 
+  filter(., language == "sp")%>%
+  ggplot(., aes(x = group, y = perc, color = type, dodge = type)) + 
+  stat_summary(fun.data = mean_cl_boot, geom = 'pointrange', position = position_dodge(0.5), size = 1) + 
+  stat_summary(fun.y = mean, geom = 'pointrange', position = position_dodge(0.5), size = 1) + 
+  ylim(0, 1) + 
+  labs(y = "% Response", x = 'Group')
+
+
+
+# test with GLM
+df_counts_wide$group <- factor(df_counts_wide$group, levels = c("l2", "mo", "hl"))
+glm_null <- glm(cbind(overt, null) ~ 1, data = df_counts_wide[df_counts_wide$language == 'sp', ], family = 'binomial')
+glm_add <- glm(cbind(overt, null) ~ group, data = df_counts_wide[df_counts_wide$language == 'sp', ], family = 'binomial')
+
+anova(glm_null, glm_add, test = 'Chisq')
+
+summary(glm_add)
+
+#Acceptance of nulls/overts as a function of proficiency
+
+
+prof_plot_sp <- df_counts_long %>%
+  filter(., language == 'sp') %>%
+  ggplot(., aes(x = profEn, y = perc, color = type)) + 
+  facet_grid(.~ group) + 
+  geom_jitter() + 
+  geom_smooth(method = 'lm', se = F, fullrange = T) + 
+  labs(y = "% response", x = 'Spanish proficiency')
+
+#Model Summary
+
+#View(df_null_sub)
+
+mod_full <- glm(respFactor ~ profSp + group + profSp:group, data = df_null_sub[df_null_sub$language == 'sp', ], family = 'binomial')
+mod_add <- glm(respFactor ~ profSp + group, data = df_null_sub[df_null_sub$language == 'sp', ], family = 'binomial')
+mod_prof <- glm(respFactor ~ profSp, data = df_null_sub[df_null_sub$language == 'sp', ], family = 'binomial')
+mod_group <- glm(respFactor ~ group, data = df_null_sub[df_null_sub$language == 'sp', ], family = 'binomial')
+mod_null <- glm(respFactor ~ 1, data = df_null_sub[df_null_sub$language == 'sp', ], family = 'binomial')
+
+anova(mod_add, mod_full)
+
+anova(mod_null, mod_group, mod_prof, mod_add, mod_full, test = 'Chisq')
 anova(mod_null, mod_full, test = 'Chisq')
 
-summary(mod_group)
+summary(mod_full)
 
